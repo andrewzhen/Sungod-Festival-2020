@@ -1,0 +1,931 @@
+/* ****************************** RESET ****************************** */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, #sub-page ul,
+#sub-page ol, .drawers-section-title .btns, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.8rem; 
+}
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+/* ****************************** FONTS ****************************** */
+ @font-face {
+  font-family: "Titling Gothic FB";
+  src:  url("https://use.typekit.net/af/d58aa1/00000000000000003b9ae8e0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+        url("https://use.typekit.net/af/d58aa1/00000000000000003b9ae8e0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),
+        url("https://use.typekit.net/af/d58aa1/00000000000000003b9ae8e0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype"),
+        url("../../assets/fonts/Titling-Gothic-Bold.ttf") format("ttf"),
+        url("../../assets/fonts/Titling-Gothic-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("../../assets/fonts/TT-Norms-Pro-Bold.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("../../assets/fonts/TT-Norms-Pro-Medium.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("../../assets/fonts/TT-Norms-Pro-Normal.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("../../assets/fonts/TT-Norms-Pro-Regular.otf") format("opentype");
+  font-weight: 500;
+}
+
+
+/* ****************************** RESPONSIVENESS *****************************/
+@media only screen and (max-width: 600px) {
+  body #landing { padding: 2rem 1rem; }
+  body #hamburger { display: block; }
+  body nav { text-align: left; padding: 0 20px; } 
+  body main nav a { height: 1.7rem; right: 20px; left: initial; }
+  body nav ul { display: none; }
+  body .sungod-logo { opacity: 0.7; }
+  body #details { font-size: 5.7vw; }
+  body #sgf { font-size: 34vw; line-height: 34vw; margin-bottom: 3rem; }
+  body #countdown { font-size: 14vw; } 
+  body #update { font-size: 15vw; padding: 0 1rem; } 
+  body .footer-left a { margin: 0 1rem; } 
+  body .sponsor-logo { opacity: 0.7; }
+  body .social-logo { opacity: 0.7; height: 1.3rem; }
+  #content #register + div > .cta { margin: 3vw 0 60vw; }
+  body footer { position: initial; width: calc(100vw - 2rem); }
+  #landing #landing-footer .footer-left, #landing #landing-footer .footer-right, #content #content-footer .footer-right { display: none; }
+  #content #content-footer .footer-left { position: absolute; bottom: 25vw; width: 100%; display: flex; justify-content: center; }
+  #content .main-carousel .carousel-cell { height: 50vh; }
+  #content #artistNameOutline, #content #artistName { font-size: 12vw; }
+  #content #artistName { top: calc(56vw); }
+  #content #artistNameOutline { top: calc(64vw); -webkit-text-stroke: 1.5vw var(--blue); }
+
+  body .container .pageHeader { font-size: 6vw; margin: 25vw 0 10vw; }
+  .container #about-img { width: 100%; margin: 0 auto 10vw; }
+  .container .about-container { width: 100%; }
+  .container .about-container .about-item { margin-bottom: 10vw; }
+  .container .about-container h2 { font-size: 6vw; margin-bottom: 3vw; }
+  .container .about-container p { font-size: 4vw; line-height: 160%;}
+
+  body #iris-safety { width: 30vw; height: 75vw; }
+  .container .drawers-section .drawers-section-title { margin-bottom: 1rem; }
+  .container .drawers-container .drawer-label { padding: 0.8rem; }
+  .container .drawers-container .drawer-label h3 { font-size: 4vw; }
+  .container .drawers-container .caret { margin-bottom: 0.5rem; }
+  .container .drawers-container .drawer-content { font-size: 4vw; padding: 2rem 0.5rem; }
+  .container .drawers-container .drawer-content ol ul { margin: 1rem 0 0 1rem; }
+
+  .container .sponsor-container { flex-direction: column; margin: 0; }
+  .container .sponsor-container .sponsor { width: 40%; margin: 8vw 4vw; }
+}
+
+@media only screen and (max-width: 767px) {
+  #content .copy { font-size: 1.1rem; text-align: center; }
+  #content .cta { font-size: 1rem; padding: 1rem 4rem; border-width: 0.1rem; }
+  #content #safety + div > .copy { max-width: 40vw; }
+}
+
+@media screen and (max-width: 767px) and (min-width: 601px) {
+  body nav { font-size: 2vw; }
+}
+
+@media only screen and (max-width: 900px) {
+  main nav a { left: calc(50% - 1rem); }
+  body .sponsor-container .sponsor img { width: 100%; }
+}
+
+@media only screen and (max-width: 1400px) {
+  #main-container .container { max-width: 85%; }
+  .container .about-container { font-size: 1.2rem; }
+  .container .pageHeader { font-size: 2rem; margin: 8rem 0 3rem; }
+  .sponsor-container .sponsor { margin: 4vw 0; }
+  .sponsor-container .sponsor img { width: 75%; }
+}
+
+
+/* ****************************** VARIABLES ****************************** */
+:root {
+  --blue: #2385BC;
+  --bg: #EEEEEE;
+}
+
+body {
+  font-family: "Titling Gothic FB", Arial, sans-serif;
+  background-color: var(--bg);
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+.noise {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .045;
+}
+
+
+/* ****************************** LANDING ****************************** */
+#main-container {
+  position: absolute;
+  transform: translateX(0);
+  transition: 0.3s;
+  width: 100%;
+  min-height: 100%;
+  color: #333;
+}
+
+#radius-container {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: calc(100vw + 20px);
+  height: 30px;
+  border: solid #EEEEEE;
+  border-width: 20px 20px 0 20px;
+  border-radius: 30px 30px 0 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 9;
+  transition: 0.3s;
+}
+
+#landing {
+  padding: 2rem 3rem;
+  color: white; 
+  width: 100%;
+  height: 100vh;
+  height: var(--windowHeight);
+  box-sizing: border-box;
+  transition: 0.3s;
+  transform: translateX(0);
+}
+
+#hamburger {
+  display: none;
+  position: fixed;
+  top: calc(4rem / 2 - 0.3rem);
+  left: 2rem;
+  z-index: 13;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+#hamburger.blueIcon div {
+  background-color: var(--blue);
+}
+#hamburger div {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: white;
+  margin: 0.3rem 0;
+  border-radius: 0.5rem;
+}
+#hamburger-menu {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 50vw;
+  height: calc(100vh - 20px);
+  height: calc(var(--windowHeight) - 20px);
+  background-color: var(--bg);
+  transform: translateX(-110%);
+  padding: 4vw 6vw;
+  box-sizing: border-box;
+  font-family: "TT Norms";
+  font-size: 4vw;
+  font-weight: 500;
+  transition: 0.3s;
+}
+#hamburger-menu li:not(:last-child) {
+  margin-bottom: 7vw;
+}
+#hamburger-menu > a {
+  margin-bottom: 15vw;
+  display: block;
+}
+#hamburger-menu > a img {
+  display: block;
+  margin: auto;
+  width: 75%;
+}
+#hamburger-menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--blue);
+}
+#hamburger-menu-contact {
+  position: absolute;
+  bottom: 4vw;
+  width: calc(100% - 12vw);
+  text-align: center;
+}
+#hamburger-menu-contact a {
+  margin: 0 3vw;
+}
+
+nav {
+  width: calc(100% - 20px);
+  height: 4rem; 
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.nav-scroll, .alt-nav {
+  background-color: var(--blue);
+  transition: .3s;
+}
+.nav-scroll ul li a, .white-nav ul li a {
+  color: white;
+}
+.nav-scroll li:not(:last-child)::after, .white-nav li:not(:last-child)::after {
+  background-color: white;
+}
+
+nav ul:first-child {
+  float: left;
+}
+
+nav > a {
+  display: inline-flex;
+  position: absolute;
+  left: calc(50% - 5rem);
+}
+
+nav ul:last-child {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav li a {
+  font-family: "TT Norms";
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--blue);
+  transition: 0.3s;
+}
+
+nav li a:hover {
+  opacity: 0.7; 
+  transition: 0.3s;
+}
+
+nav li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+nav li:not(:last-child)::after {
+  content: "";
+  position: relative;
+  top: 0;
+  right: calc(-1rem / 2);
+  width: 2px;
+  height: 0.8rem;
+  background-color: var(--blue);
+  display: inline-block;
+}
+
+.active, .active:hover {
+  opacity: 0.3;
+}
+
+#hero-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  text-transform: uppercase; 
+}
+
+#details {
+  font-size: 2.5vw;
+  opacity: 0.7; 
+} 
+
+#sgf {
+  margin-bottom: 3rem;
+  font-size: 12vw; 
+  line-height: 12vw;
+}
+
+#countdown {
+  opacity: 0.7;
+  font-size: 6vw; 
+}
+
+#update {
+  font-size: 3vw;
+  opacity: 0.7;
+  color: inherit;
+  text-decoration: none;
+  border: 0.5rem solid white;
+  transition: 0.3s;
+  padding: 1rem; 
+}
+
+#update:hover {
+  opacity: 1; 
+}
+
+#video-container video {
+  width: calc(100% - 20px);
+  height: calc(100% - 23px);
+  object-fit: cover; 
+  border-radius: 10px;
+  left: 10px;
+  top: 10px;
+}
+
+#sunflower-start, #sunflower-loop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10; 
+}
+
+.footer-left {
+  position: relative;
+  left: 0; 
+}
+.footer-left a {
+  margin-right: 1rem; 
+}
+.footer-left a, .footer-right a {
+  text-decoration: none; 
+  transition: 0.3s ease-out; 
+}
+.footer-left a:hover, .footer-right a:hover {
+  opacity: 0.5;
+  transition: 0.3s ease-out; 
+}
+
+.sponsor-logo {
+  width: 4rem; 
+  height: auto; 
+}
+
+.footer-right {
+  position: relative;
+  right: 0; 
+}
+.footer-right a:not(:first-child) {
+  margin-left: 1rem; 
+}
+
+.logo-svg-white {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: white; 
+}
+.logo-svg-blue {
+  fill: var(--blue);
+}
+
+.social-logo {
+  height: 1rem; 
+}
+
+#landing #landing-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 2rem;
+  width: calc(100vw - 6rem); 
+}
+
+
+/* ****************************** LINEUP ****************************** */
+#content {
+  overflow: hidden;
+  font-family: "TT Norms";
+  font-weight: 500;
+  text-align: center;
+  min-height: 100%;
+  position: relative;
+}
+
+#content a {
+  text-align: center;
+}
+
+.main-carousel {
+  position: relative;
+  z-index: 10;
+}
+
+.flickity-prev-next-button {
+  height: 50vh;
+}
+
+#artistNameOutline, #artistName {
+  position: relative;
+  left: 13vw;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 8vw;
+  color: white;
+  font-size: 8vw;
+  font-weight: 800;
+
+  pointer-events: none;
+}
+#artistNameOutline {
+  z-index: 10;
+  top: calc(35vw - 2.5vw);
+  -webkit-text-stroke: 0.7vw var(--blue);
+}
+#artistName {
+  z-index: 11;
+  top: calc(35vw / 2 + 7vw);
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 115%;
+}
+
+#lineup {
+  right: -19vw;
+  background-image: url("../images/home/headers/lineup.png");
+  height: 55vw;
+}
+#lineup + div {
+  margin-top: 25vw;
+}
+
+#info {
+  left: -14vw;
+  background-image: url("../images/home/headers/info.png");
+  height: 55vw;
+}
+#info + div {
+  margin-top: 40vw;
+}
+
+#safety {
+  right: -7vw;
+  background-image: url("../images/home/headers/safety.png");
+  height: 55vw;
+}
+#safety + div {
+  margin-top: 40vw;
+  position: relative;
+  z-index: 10;
+}
+
+#register {
+  left: -8vw;
+  background-image: url("../images/home/headers/register.png");
+  height: 55vw;
+}
+#register + div {
+  margin-top: 45vw;
+}
+#register + div > .cta {
+  margin: 3vw 0 20vw;
+}
+
+.carousel-cell {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 66%;
+  height: 35vw;
+  margin-right: 10vw;
+  border-radius: 5px;
+}
+
+#first { background-image: url("../images/home/lineup/kingtriton.jpg"); }
+#second { background-image: url("../images/home/lineup/fluffy.jpg"); }
+#third { background-image: url("../images/home/lineup/ascebear.jpg"); }
+
+
+/* ****************************** CONTENT ****************************** */
+.copy {
+  max-width: 65%;
+  width: fit-content;
+  margin: auto;
+  line-height: 180%;
+  color: #5492B7;
+  font-size: 1.8vw;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+.cta {
+  color: #5492B7;
+  text-decoration: none;
+  border: 0.2rem solid #5492B7;
+  transition: 0.3s;
+  padding: 1.5rem 6rem;
+  display: inline-block; 
+  font-size: 1.6vw;
+  margin: 3vw 0;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+.cta:hover {
+  opacity: 0.7; 
+  transition: 0.3s;
+}
+
+.flower {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+#sunflower {
+  background-image: url("../images/home/flowers/sunflower.png");
+  height: 50vw;
+  width: 40vw;
+  left: -20vw;
+}
+
+.iris {
+  background-image: url("../images/home/flowers/iris.png");
+  pointer-events: none;
+}
+#iris-home {
+  height: 35vw;
+  width: 45vw;
+  right: 0;
+  bottom: 0;
+}
+#iris-safety {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  width: 25vw;
+  height: 35vw;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#content #content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  bottom: 2rem;
+  left: 3rem;
+  width: calc(100vw - 6rem); 
+}
+
+
+/* ****************************** ABOUT ****************************** */
+.about-container {
+  width: 75%;
+  margin: auto;
+  font-size: 1.2vw;
+  line-height: 160%;
+}
+
+#about-img {
+  display: block;
+  width: 75%;
+  margin: 0 auto 5rem;
+}
+
+.about-item {
+  margin-bottom: 4rem;
+}
+
+.about-item h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--blue);
+}
+
+.about-item p {
+  margin-bottom: 1rem;
+}
+
+
+/* ****************************** SAFETY ****************************** */
+.drawers-section {
+  font-family: "TT Norms";
+  font-weight: 500;
+  font-size: 1.4vw;
+  position: relative;
+  z-index: 11;
+}
+
+.drawers-section:not(:last-child) {
+  margin-bottom: 5rem; 
+}
+
+.drawers-section-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .drawers-section-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+  }
+}
+
+.drawers-section-title .btns {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.04rem;
+  color: #58595b;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+.drawers-section-title .btns .expand,
+.drawers-section-title .btns .close {
+  -webkit-transition: opacity 0.3s, -webkit-filter 0.3s;
+  transition: opacity 0.3s, -webkit-filter 0.3s;
+  transition: opacity 0.3s, filter 0.3s;
+  transition: opacity 0.3s, filter 0.3s, -webkit-filter 0.3s; 
+}
+
+.drawers-section-title .btns .expand.disabled,
+.drawers-section-title .btns .close.disabled {
+  opacity: 0.5; 
+}
+
+.drawers-section-title .btns .expand:not(.disabled),
+.drawers-section-title .btns .close:not(.disabled) {
+  cursor: pointer; 
+}
+
+@media (hover: hover) {
+  .drawers-section-title .btns .expand:not(.disabled):hover,
+  .drawers-section-title .btns .close:not(.disabled):hover {
+    opacity: 0.7;
+  } 
+}
+
+.drawers-container .drawer-label {
+  cursor: pointer;
+  background-color: var(--bg);
+  border: solid var(--blue);
+  border-width: 2px 2px 0 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  padding: 1.2rem; 
+}
+.drawers-container .drawer:last-child .drawer-label{
+  border: 2px solid var(--blue);
+}
+
+@media only screen and (max-width: 480px) {
+  .drawers-container .drawer-label {
+    padding: 1.5rem; 
+  } 
+}
+
+.drawers-container .drawer-label h3 {
+  font-size: 1.5rem;
+  padding-right: 2rem;
+  color: var(--blue);
+  margin-bottom: 0 !important; 
+}
+
+.drawer .active, .drawer .active:hover {
+  opacity: 1;
+}
+.drawers-container .drawer-label.active {
+  background-color: var(--blue); 
+}
+.drawers-container .drawer-label.active h3{
+  color: white;
+}
+.drawers-container .drawer-label.active .caret {
+  border-color: white;
+}
+
+@media (hover: hover) {
+  .drawers-container .drawer-label:hover {
+    background-color: var(--blue); 
+  } 
+  .drawers-container .drawer-label:hover h3 {
+    color: white;
+  } 
+  .drawers-container .drawer-label:hover .caret {
+    border-color: white;
+  } 
+}
+
+.drawers-container .drawer-content {
+  display: none;
+  padding: 2rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 160%;
+}
+.drawers-container .drawer-content h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.drawers-container .drawer-content a {
+  color: inherit;
+}
+.drawers-container .drawer-content p,
+.drawers-container .drawer-content hr,
+.drawers-container .drawer-content ol > li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.drawers-container .drawer-content ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+}
+.drawers-container .drawer-content ol li {
+  padding-left: 0.5rem;
+}
+.drawers-container .drawer-content ol ul {
+  list-style-type: disc;
+  margin: 1rem 0 0 2rem;
+}
+.drawers-container .drawer-content ol ul li,
+.drawers-container .drawer-content ul li {
+  margin-bottom: 1rem;
+}
+.drawers-container .drawer-content ul {
+  list-style-type: disc;
+  margin: 0 0 2rem 2rem;
+}
+
+.drawers-container .caret {
+  position: relative;
+  width: 0.3rem;
+  height: 0.3rem;
+  border: solid var(--blue);
+  border-width: 0 0.2rem 0.2rem 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; 
+}
+
+.drawers-container .caret.active {
+  border-color: white;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg); 
+}
+  
+@media only screen and (max-width: 480px) {
+  .drawers-container .caret {
+    margin-top: 0.3rem; 
+  } 
+}
+
+
+/* ****************************** SPONSORS ****************************** */
+.container {
+  font-family: "TT Norms";
+  font-weight: 500;
+  position: relative;
+  max-width: 65%;
+  margin: 0 auto 15vw;
+}
+
+.sponsor-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sponsor {
+  display: inline-block;
+  width: calc(100% / 3 - (4vw * 2));
+  margin: 4vw;
+}
+
+.sponsor img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+  display: block;
+  margin: auto;
+}
+
+.sponsor img:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.pageHeader {
+  font-family: "TT Norms";
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--blue);
+  width: 100%;
+  text-align: center;
+  margin: 12rem 0 5rem;
+}
